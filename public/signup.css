@@ -1,0 +1,96 @@
+/* ================================
+   DARK THEME — BLACK + GREEN
+================================ */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #0a0a0a; /* Pure dark */
+  color: #e0ffe0; /* Soft greenish white */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Center wrapper */
+.container {
+  background: #111;
+  padding: 40px;
+  width: 400px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 255, 0, 0.12);
+  border: 1px solid #0f0; /* Neon green outline */
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-size: 26px;
+  color: #00ff66;
+}
+
+/* Form layout */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  text-align: left;
+  color: #66ff99;
+  font-size: 0.9rem;
+}
+
+input {
+  padding: 10px;
+  border: 2px solid #00cc55;
+  background: #0f0f0f;
+  border-radius: 6px;
+  color: #ccffdd;
+  outline: none;
+  transition: 0.2s;
+}
+
+/* Hover / typing effect */
+input:focus {
+  border-color: #00ff99;
+  box-shadow: 0 0 8px rgba(0, 255, 100, 0.4);
+}
+
+/* Button styling */
+button {
+  margin-top: 10px;
+  padding: 12px;
+  background: #00cc55;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.25s ease-in-out;
+}
+
+button:hover {
+  background: #00ff88;
+  box-shadow: 0 0 10px rgba(0, 255, 120, 0.5);
+}
+
+/* Admin link */
+.admin-link {
+  display: block;
+  margin-top: 20px;
+  color: #66ff99;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.admin-link:hover {
+  color: #00ff99;
+  text-shadow: 0 0 8px rgba(0,255,120,0.7);
+}

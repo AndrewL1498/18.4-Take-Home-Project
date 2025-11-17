@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset=utf-8>
+  <meta charset="utf-8">
   <title>Yodlr Registration Portal</title>
+  <link rel="stylesheet" href="signup.css">
 </head>
 <body>
-  <h1>Yodlr Registration Portal</h1>
-  <form id ="signup-form">
-    Email: <input type="email" id="email" name="email" required></br>
-    First Name: <input type="text" id="firstName" name="firstName"></br>
-    Last Name: <input type="text" id="lastName" name="lastName"></br>
-    <button type="submit">Submit</button>
-  </form>
-  <p>
-    <a href="/admin.html">Admin Page</a>
-  </p>
-  <p>
-    <a href="/login.html">Login Page</a>
-  </p>
+  <div class="container">
+    <h1>Yodlr Registration Portal</h1>
 
-  <script src ="js/signup.js"></script>
+    <form id="signup-form" class="form">
+      <label>Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label>First Name</label>
+      <input type="text" id="firstName" name="firstName">
+
+      <label>Last Name</label>
+      <input type="text" id="lastName" name="lastName">
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <a class="admin-link" href="/admin.html">Go to Admin Page</a>
+    <a class="admin-link" href="/login.html">Go to Login Page</a>
+  </div>
+
+  <script src="js/signup.js"></script>
 </body>
 </html>

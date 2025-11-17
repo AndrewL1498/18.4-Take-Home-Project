@@ -1,0 +1,53 @@
+/* admin.css */
+body {
+    background-color: #000; /* black background */
+    color: #0f0; /* neon green text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 2rem 0 1rem 0;
+    text-shadow: 0 0 5px #0f0;
+}
+
+a {
+    color: #0f0;
+    text-decoration: none;
+    margin: 0.5rem;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 80%;
+    max-width: 900px;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+th, td {
+    border: 1px solid #0f0;
+    padding: 0.75rem;
+}
+
+th {
+    background-color: #111;
+}
+
+td {
+    background-color: #000;
+}
+
+tbody tr:hover {
+    background-color: #022d02; /* dark green hover */
+}
