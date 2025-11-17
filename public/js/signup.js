@@ -20,6 +20,17 @@ async function signupUser(email, firstName, lastName) {
     return data;
 }
 
+
+async function checkUserExists(email) {
+    const response = await fetch('/users');
+    if (!response.ok) throw new Error(`Server error: ${response.status}`);
+    const users = await response.json();
+
+    console.log(users);
+
+    return users.some(user => user.email === email); //.some is an array method that tests if any users email matches the passed in email and passes true or false depending on the outcome
+}
+
 form.addEventListener('submit', async (event) => {
     event.preventDefault(); // stop default form submission
 
@@ -28,14 +39,21 @@ form.addEventListener('submit', async (event) => {
     const lastName = lastNameInput.value;
 
     try {
+
+        const exists = await checkUserExists(email);
+        if (exists) {
+            alert('A user with this email already exists!');
+            return;
+        }
+
         const data = await signupUser(email, firstName, lastName);
         console.log('User created:', data);
 
-        // Optional: show success message
-        alert(`Signup successful! Your ID is ${data.id}`);
-
         // Reset the form
         form.reset();
+
+        //Page redirect
+        window.location.href = 'admin.html';
 
     } catch (err) {
         console.error('Signup failed', err);
